@@ -1,5 +1,5 @@
 console.log("hello world 2");
-
+app.use(cors());
 const express = require('express');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
@@ -24,7 +24,7 @@ const app = express();
 // app.get('/api/test', (req, res) => {
 //  console.log('api call successfully');
 // })
-app.use(cors());
+
 app.use(express.json()); // use for json post Requested
 app.use('/api/users', userRoute)
 
